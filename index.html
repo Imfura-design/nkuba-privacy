@@ -113,16 +113,25 @@
   <h2>Permissions</h2>
   <ul>
     <li>
-      <strong>webRequest / host access to all sites</strong> — required to
-      notice video streams as pages load, on whichever site you are visiting.
+      <strong>webRequest</strong> — used to notice video streams as pages
+      load.
     </li>
     <li>
-      <strong>tabs</strong> — required to know which tab is active so
-      detections are shown for the correct page.
+      <strong>tabs</strong> — used to know which tab is active so detections
+      are shown for the correct page.
     </li>
     <li>
-      <strong>storage</strong> — required to keep the current tab's detections
+      <strong>storage</strong> — used to keep the current tab's detections
       available to the popup during your session.
+    </li>
+    <li>
+      <strong>Host access to web pages</strong> (<code>&lt;all_urls&gt;</code>)
+      — <strong>optional and only requested when you click "Allow" in the
+      popup</strong> the first time you use the extension. The extension does
+      not access any sites until you grant this, and you can revoke it at
+      any time from <code>chrome://extensions</code> → Nkuba Helper →
+      Site access. Access is needed because video can appear on any site;
+      the extension reads only media URLs and the page URL/title.
     </li>
   </ul>
 
